@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="text-bg-secondary">
+<!--Заголовок-->
+<header class="row text-bg-dark m-0 p-3">
+  <span class="col h3 text-start">Практична робота 2</span> 
+  <span class="col h3 text-center">Завдання 1</span> 
+  <span class="col h3 text-end">ТВ-32 Михайленко Роман</span>
+</header>
+<!--Основна частина-->
+<div class="row text-bg-secondary m-0">
+  <!--Половина з полями вводу і кнопкною обрахунку-->
+  <span class="col">
+    <p class="h4 m-3">Поля вводу:</p>
+    <!--Форма з інпут полями-->
+    <form class="m-3" onsubmit="calculateAndShow(event)">
+      <!-- Поле вугілля -->      
+      <div class="w-75 mb-3">
+        <label for="coal" class="form-label">Донецьке газове вугілля марки ГР, т:</label>
+        <input type="number" value="1096363"class="form-control" id="coal" name="coal" placeholder="Тон вугілля" min="0" step="any" required>
+      </div>
+      <!-- Поле мазуту -->
+      <div class="w-75 mb-3">
+        <label for="oil" class="form-label">Високосірчистий мазут марки 40, т:</label>
+        <input type="number" value="70945" class="form-control" id="oil" name="oil" placeholder="Тон мазуту" min="0" step="any" required>
+      </div>
+      <!-- Поле газу -->
+      <div class="w-75 ">
+        <label for="gas" class="form-label">Природний газ із газопроводу Уренгой-Ужгород, м<sup>3</sup>:</label>
+        <input type="number" value="84762" class="form-control" id="gas" name="gas" placeholder="Кубів газу" min="0" step="any" required>
+      </div>
+      <!-- Кнопка підтвердження відпраки -->
+      <button type="submit" class="btn btn-primary mt-3" >Обрахувати</button>
+    </form>
+  </span>
+  
+  <!--Половина з виводом результатів-->
+  <span class="col">
+    <p class="h4 m-3">Результат:</p>
+    <span class="fs-5 m-3"> Для заданого енергоблоку і відповідним умовам роботи:</span>
+
+    <pre class="fs-6 mt-3">
+    Показник емісії твердих частинок при спалюванні вугілля становитиме:
+    <span id="particles_coal">0</span> г/ГДж;
+    Валовий викид при спалюванні вугілля становитиме: 
+    <span id="emission_coal">0</span> т.;
+    Показник емісії твердих частинок при спалюванні мазуту становитиме: 
+    <span id="particles_oil">0</span> г/ГДж;
+    Валовий викид при спалюванні мазуту становитиме: 
+    <span id="emission_oil">0</span> т.;
+    Показник емісії твердих частинок при спалюванні природного газу становитиме:
+    <span id="particles_gas">0</span> г/ГДж;
+    Валовий викид при спалюванні природного газу становитиме: 
+    <span id="emission_gas">0</span> т.
+      </pre>
+    </span>
+</div>
+</body>
+</html>
