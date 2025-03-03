@@ -1,4 +1,4 @@
-# PW01TV-32_Mykhailenko_Roman_Oleksandrovych
+# PW02TV-32_Mykhailenko_Roman_Oleksandrovych
 ТВ-32 Михайленко Роман Олександрович
 Практична робота 2
 ## Завдання 1
